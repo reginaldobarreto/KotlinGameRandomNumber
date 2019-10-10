@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.ScrollView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import br.com.barrsoft.kotlingamerandomnumber.R.string.status_begin
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -29,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         putInstanceData(outState)
     }
     fun start(v: View) {
-        log("Game started")
+        log(resources.getString(R.string.status_begin))
         num.setText("")
         started = true
         doGuess.setEnabled(true)
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
     fun guess(v:View) {
         if(num.text.toString() == "") return
         tries++
-        log("Guessed ${num.text} (tries:${tries})")
+        log(resources.getString(R.string.status_begin) + " ${num.text} " + resources.getString(R.string.msg_tries) + " ${tries})")
         val g = num.text.toString().toInt()
         if(g < number) {
             status.setText(R.string.status_too_low)
@@ -62,9 +63,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun putInstanceData(outState: Bundle?) {
         if (outState != null) with(outState) {
-            putBoolean("started",  started)
-            putInt("number", number)
-            putInt("tries", tries)
+            putBoolean(resources.getString(R.string.msg_start),  started)
+            putInt(resources.getString(R.string.msg_number), number)
+            putInt(resources.getString(R.string.msg_tries), tries)
             putString("statusMsg", status.text.toString())
             putStringArrayList("logs", ArrayList(console.text.split("\n")))
         }

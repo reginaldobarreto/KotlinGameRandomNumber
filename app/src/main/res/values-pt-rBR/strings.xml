@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KotlinGameRandomNumber</string>
+    <string name="edit.number">Número</string>
+    <string name="status.begin">Jogo iniciado</string>
+    <string name="label.guess">Adivinhe um número:</string>
+    <string name="guess.hint">Adivinhar um número entre %1$d e %2$d</string>
+    <string name="label.log">Registro:</string>
+    <string name="status.hit">Você conseguiu depois de %1$d tentativas! Pressione INICIAR para um novo jogo.</string>
+    <string name="status.start.info">Pressione INICIAR para iniciar um jogo</string>
+    <string name="status.too.high">Desculpe, muito alto.</string>
+    <string name="status.too.low">Desculpe, muito baixo.</string>
+    <string name="title.numberguess">Adivinhe número</string>
+    <string name="btn.do.guess">Adivinhe !</string>
+    <string name="btn.start">Inicio</string>
+    <string name="msg.start">Iniciado</string>
+    <string name="msg.tries">tentativa:</string>
+    <string name="msg.number">número</string>
+</resources>
